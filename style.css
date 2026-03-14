@@ -327,3 +327,147 @@ button:hover { background-color: #008fb3; }
     border-radius: 5px;
     margin-top: 15px;
 }
+
+/* --- NUEVOS ESTILOS PARA LA CARTELERA DE EVENTOS EN CUADRÍCULA --- */
+
+.section-title {
+    text-align: center;
+    margin: 60px 0 40px;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* CONTENEDOR DE LA CUADRÍCULA (GRID CONTAINER) */
+.events-grid {
+    display: grid;
+    /* Crear columnas responsivas automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; /* Espacio entre tarjetas */
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ESTILOS DE LA TARJETA (GRID ITEM / CARD) */
+.event-card {
+    background-color: #111; /* Fondo oscuro ligeramente diferente al body */
+    border: 1px solid #333;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column; /* Organizar contenido verticalmente dentro de la card */
+    overflow: hidden; /* Asegurar que el contenido no se salga de las esquinas redondeadas */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para posicionar el badge */
+}
+
+/* EFECTO HOVER PARA TODA LA TARJETA */
+.event-card:hover {
+    transform: translateY(-5px); /* Pequeño salto hacia arriba */
+    border-color: #00d4ff; /* Borde cian */
+    box-shadow: 0 10px 20px rgba(0, 212, 255, 0.2); /* Sombra cian suave */
+}
+
+/* Estilos internos de la tarjeta */
+.event-header {
+    padding: 25px 25px 10px;
+    position: relative;
+}
+
+.event-header h3 {
+    margin: 10px 0 0;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.event-badge {
+    background-color: #00d4ff; /* Cian para activo */
+    color: #000;
+    font-weight: bold;
+    font-size: 0.75rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+
+/* Variaciones de badges */
+.event-badge.upcoming { background-color: #555; color: #fff; }
+.event-badge.past { background-color: #222; color: #888; }
+
+
+.event-body {
+    padding: 0 25px;
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.event-body p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-footer {
+    padding: 10px 25px 25px;
+    margin-top: auto; /* Asegura que el footer siempre esté abajo */
+}
+
+/* Estilos de botones dentro de tarjetas */
+.btn-card {
+    display: block; /* Ocupa todo el ancho */
+    width: 100%;
+    padding: 12px;
+    background-color: #00d4ff;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #00d4ff;
+    transition: background-color 0.2s;
+    box-sizing: border-box;
+}
+
+.btn-card:hover {
+    background-color: #008fb3;
+    border-color: #008fb3;
+}
+
+.btn-card.secondary {
+    background: none;
+    color: #00d4ff;
+}
+
+.btn-card.secondary:hover {
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.btn-card-disabled {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #222;
+    color: #666;
+    border: 1px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: not-allowed;
+}
+
+/* Estilos específicos para tarjetas bloqueadas o pasadas */
+.event-card.locked:hover,
+.event-card.past:hover {
+    border-color: #444; /* Borde menos agresivo en hover */
+    box-shadow: none;
+}
