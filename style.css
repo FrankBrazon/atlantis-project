@@ -213,7 +213,7 @@ button:hover { background-color: #008fb3; }
     text-align: center;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotoProject.png'); /* Imagen de fondo genérica de CrossFit */
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     width: 100%;
 }
 
