@@ -211,7 +211,7 @@ button:hover { background-color: #008fb3; }
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop'); /* Imagen de fondo genérica de CrossFit */
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('fotoProject.png'); /* Imagen de fondo genérica de CrossFit */
     background-size: cover;
     background-position: center;
     width: 100%;
