@@ -3,67 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>atlantisProject - Open 26.1</title>
+    <title>Atlantis - CrossFit Competition Program</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <img src="atlantisproject.PNG" alt="Logo" width="350">
-        <h2>OPEN 26.1</h2>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="atlantisproject.PNG" alt="Logo Atlantis" width="120">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="eventos.html">Eventos Especiales</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
+        <div class="nav-auth">
+            <button class="btn-login">Iniciar Sesión</button>
+            <button class="btn-register">Registrarse</button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>ATLANTIS PROJECT</h1>
+            <p>El programa definitivo de competencia de CrossFit. Desafía tus límites, domina el leaderboard y alcanza la élite del fitness.</p>
+            <div class="hero-buttons">
+                <a href="eventos.html" class="btn-primary">Ver Eventos</a>
+                <a href="#planes" class="btn-secondary">Unirse ahora</a>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
-        <!-- TABLA DE RESULTADOS -->
-        <div class="table-responsive">
-            <table id="leaderboard">
-                <thead>
-                    <tr>
-                        <th>Pos</th>
-                        <th>Atleta</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- JS cargará los datos aquí -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- FORMULARIO PARA AGREGAR -->
-        <section class="form-card">
-            <h3>AÑADIR PARTICIPANTE</h3>
-            
-            <div class="input-group">
-                <input type="text" id="nombre" placeholder="Nombre completo">
-                <select id="tipoResultado" onchange="toggleInputs()">
-                    <option value="tiempo">Completó (Tiempo)</option>
-                    <option value="reps">No completó (Reps)</option>
-                </select>
-            </div>
-
-            <!-- Sección Tiempo -->
-            <div id="sectionTiempo" class="input-group">
-                <input type="text" id="inputTiempo" placeholder="Tiempo (Ej: 11:32)">
-            </div>
-
-            <!-- Sección Reps -->
-            <div id="sectionReps" class="input-group" style="display:none;">
-                <select id="selectEjercicio" onchange="actualizarPrevisualizacionReps()">
-                    <!-- Se llena con JS -->
-                </select>
-                <input type="number" id="inputRepsExtra" placeholder="Reps en este paso" oninput="actualizarPrevisualizacionReps()">
-                <div id="previewReps" class="preview-text">Total acumulado: 0 reps</div>
-            </div>
-
-            <button onclick="agregarScore()">GUARDAR RESULTADO</button>
-        </section>
-
-        <div class="actions">
-            <button onclick="limpiarTodo()" class="btn-clear">Borrar todos los datos</button>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
-</body>
+    </body>
 </html>
